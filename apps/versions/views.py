@@ -67,7 +67,7 @@ def update_info(request, addon, version_num):
         raise http.Http404()
 
     return jingo.render(request, 'versions/update_info.html',
-                        {'version': qs[0]})
+                        {'version': qs[0]}, content_type='application/xhtml+xml')
 
 
 def update_info_redirect(request, version_id):
